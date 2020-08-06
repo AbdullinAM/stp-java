@@ -127,7 +127,12 @@ NEW_FUN_2(vc_1assertFormula, vc_assertFormula, jlong, VC, jlong, Expr, void)
 
 NEW_FUN_2(vc_1simplify, vc_simplify, jlong, VC, jlong, Expr, jlong)
 
-NEW_FUN_4(vc_1query_1with_1timeout, vc_query_with_timeout, jlong, VC, jlong, Expr, jint, int, jint, int, jint)
+NEW_FUN_3(vc_1query_1with_1timeout, vc_query_with_timeout, jlong, VC, jlong, Expr, jint, int, jint)
+
+//JNIEXPORT jint JNICALL Java_org_zhekehz_stpjava_Native_vc_1query_1with_1timeout
+//    (JNIEnv * env, jclass cls, jlong a1, jlong a2, jint a3, jint a4) {
+//    return (jint) vc_query_with_timeout((VC) a1, (Expr) a2, (int) a4);
+//}
 
 NEW_FUN_2(vc_1query, vc_query, jlong, VC, jlong, Expr, jint)
 

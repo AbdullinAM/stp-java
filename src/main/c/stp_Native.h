@@ -202,10 +202,10 @@ JNIEXPORT jlong JNICALL Java_org_zhekehz_stpjava_Native_vc_1simplify
 /*
  * Class:     org_zhekehz_stpjava_Native
  * Method:    vc_query_with_timeout
- * Signature: (JJII)I
+ * Signature: (JJI)I
  */
 JNIEXPORT jint JNICALL Java_org_zhekehz_stpjava_Native_vc_1query_1with_1timeout
-  (JNIEnv *, jclass, jlong, jlong, jint, jint);
+  (JNIEnv *, jclass, jlong, jlong, jint);
 
 /*
  * Class:     org_zhekehz_stpjava_Native

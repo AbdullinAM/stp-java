@@ -92,12 +92,11 @@ public class BoolExpr extends Expr {
         return new BoolExpr(vc, Native.vc_getCounterExample(vc.getRef(), exprRef));
     }
 
-    public final QueryResult queryWithTimeout(int timeoutMaxConflicts, int timeoutMaxTime) {
+    public final QueryResult queryWithTimeout(int timeoutMaxTime) {
         if (!vc.isUsingCryptominisat()) {
             throw new IllegalStateException("Only the cryptominisat solver supports timeoutMaxTime");
         }
-        return QueryResult.fromInt(
-                Native.vc_query_with_timeout(vc.getRef(), exprRef, timeoutMaxConflicts, timeoutMaxTime));
+        return QueryResult.fromInt(Native.vc_query_with_timeout(vc.getRef(), exprRef, timeoutMaxTime));
     }
 
     public final QueryResult query() {

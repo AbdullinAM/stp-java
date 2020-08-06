@@ -74,7 +74,7 @@ public final class Native {
 
     static native long vc_simplify(long vc, long e);
 
-    static native int vc_query_with_timeout(long vc, long e, int timeout_max_conflicts, int timeout_max_time);
+    static native int vc_query_with_timeout(long vc, long e, int timeout_max_time);
 
     static native int vc_query(long vc, long expr);
 

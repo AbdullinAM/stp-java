@@ -6,7 +6,7 @@ resources=
 csources=
 
 function prepare {
-	JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+	JAVA_HOME=/usr/lib/jvm/default
 	build_dir="$(pwd)/build/"
   mkdir -p "$build_dir"
 
