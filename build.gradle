@@ -3,17 +3,12 @@ plugins {
 }
 
 group 'org.zhekehz.stpjava'
-version '2.3'
+version '2.3.3-1'
 
 sourceCompatibility = 1.8
 
 repositories {
     mavenCentral()
-}
-
-tasks.withType(Test) {
-    exec { commandLine "./build.sh" }
-    systemProperty "java.library.path", "src/main/resources/"
 }
 
 dependencies {

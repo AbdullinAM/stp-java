@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "stp_Native.h"
+#include "org_zhekehz_stpjava_Native.h"
 #include <stp/c_interface.h>
 
 // HELPER MACROS
