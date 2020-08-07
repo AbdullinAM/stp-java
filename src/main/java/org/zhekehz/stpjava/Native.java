@@ -6,6 +6,8 @@ public final class Native {
 
     static native long vc_createValidityChecker();
 
+    static native void process_argument(char flag, long vc);
+
     // \ ANY
 
 

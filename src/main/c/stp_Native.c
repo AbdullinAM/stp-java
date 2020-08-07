@@ -44,8 +44,7 @@ JNIEXPORT ret JNICALL Java_org_zhekehz_stpjava_Native_##name                    
 
 NEW_FUN_0(vc_1createValidityChecker, vc_createValidityChecker, jlong)
 
-// \ ANY
-
+NEW_FUN_2(process_1argument, process_argument, jchar, char, jlong, VC, void)
 
 // EXPR MANIPULATION METHODS
 

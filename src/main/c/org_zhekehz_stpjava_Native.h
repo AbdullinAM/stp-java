@@ -17,6 +17,14 @@ JNIEXPORT jlong JNICALL Java_org_zhekehz_stpjava_Native_vc_1createValidityChecke
 
 /*
  * Class:     org_zhekehz_stpjava_Native
+ * Method:    process_argument
+ * Signature: (CJ)V
+ */
+JNIEXPORT void JNICALL Java_org_zhekehz_stpjava_Native_process_1argument
+  (JNIEnv *, jclass, jchar, jlong);
+
+/*
+ * Class:     org_zhekehz_stpjava_Native
  * Method:    vc_varExpr
  * Signature: (JLjava/lang/String;J)J
  */

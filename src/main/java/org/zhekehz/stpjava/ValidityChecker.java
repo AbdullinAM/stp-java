@@ -20,6 +20,10 @@ public class ValidityChecker {
         ref = Native.vc_createValidityChecker();
     }
 
+    public void setFlag(char flag) {
+        Native.process_argument(flag, ref);
+    }
+
     public void destroy() {
         Native.vc_Destroy(ref);
     }
