@@ -1,9 +1,11 @@
 plugins {
     id 'java'
+    id 'maven-publish'
+    id "com.jfrog.bintray" version "1.8.5"
 }
 
 group 'org.zhekehz.stpjava'
-version '2.3.3-1'
+version '2.3.3-3'
 
 sourceCompatibility = 1.8
 
@@ -13,4 +15,31 @@ repositories {
 
 dependencies {
     testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+publishing {
+    publications {
+        StpJavaPublication(MavenPublication) {
+            from components.java
+            groupId 'org.zhekehz'
+            artifactId 'stp-java'
+            version project.version
+        }
+    }
+}
+
+bintray {
+    user = System.getenv('BINTRAY_USER')
+    key = System.getenv('BINTRAY_KEY')
+
+    publish = true
+    publications = ['StpJavaPublication']
+    pkg {
+        repo = 'kotlin-maven'
+        userOrg = 'vorpal-research'
+        name = 'stp-java'
+        version {
+            name = project.version
+        }
+    }
 }

@@ -6,7 +6,7 @@ public class ValidityChecker {
 
     static {
         try {
-            NativeUtils.loadLibrary("stpnative");
+            NativeUtils.loadLibrary("stpjava");
             NativeUtils.loadLibrary("stp");
         } catch (IOException e) {
             e.printStackTrace();
